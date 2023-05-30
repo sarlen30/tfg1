@@ -1,0 +1,28 @@
+div[role= "menu"]{
+  display: flex;
+  justify-content: space-around;
+  margin-block-start: 2rem;
+  margin-block-end: 2rem;
+
+  mat-chip:hover{
+  background-color: pink;
+
+}
+
+  mat-chip{
+    margin-inline-end: 6rem;
+    padding: 1rem;
+
+  }
+}
+ div[role="img"]{
+   display: flex;
+   justify-content: center;
+   margin-block-start: 3rem;
+
+   img{
+     width: 400px;
+     height: 600px;
+   }
+
+ }

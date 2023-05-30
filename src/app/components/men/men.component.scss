@@ -1,0 +1,19 @@
+div[role="contentinfo"]{
+  display:grid;
+  grid-template-columns: repeat(3, 400px);
+  justify-content: center;
+  gap: 2rem;
+  margin-block-start: 2rem;
+}
+
+img{ width:400px;
+  height: 500px}
+
+
+mat-card-actions{
+  display: flex;
+  justify-content: space-between;
+  p{padding: 1rem}
+}
+
+

@@ -1,0 +1,47 @@
+<div role="contentinfo">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{products?.[4]?.nombre}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="/assets/img/pexels-mnz-1598507.jpg">
+    <mat-card-actions>
+      <p>{{products?.[4]?.precio}} $</p>
+      <button color="accent" mat-button (click)="comprarProducto(products[4])" >Comprar</button>
+    </mat-card-actions>
+  </mat-card>
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{products?.[5]?.nombre}}</mat-card-title>
+    </mat-card-header>
+
+    <img mat-card-image src="/assets/img/pexels-mica-asato-1082529.jpg">
+    <mat-card-actions>
+      <p>{{products?.[5]?.precio}} $</p>
+      <button color="accent" mat-button  (click)="comprarProducto(products[5])">Comprar</button>
+    </mat-card-actions>
+  </mat-card>
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{products?.[6]?.nombre}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="/assets/img/pexels-ylanite-koppens-934070.jpg">
+    <mat-card-actions>
+    <p>{{products?.[6]?.precio}} $</p>
+      <button color="accent" mat-button  (click)="comprarProducto(products[6])">Comprar</button>
+    </mat-card-actions>
+  </mat-card>
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{products?.[7]?.nombre}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="/assets/img/pexels-mstudio-1235692.jpg">
+    <mat-card-actions>
+      <p>{{products?.[7]?.precio}} $</p>
+      <button color="accent" mat-button  (click)="comprarProducto(products[7])">Comprar</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

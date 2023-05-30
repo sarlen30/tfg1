@@ -1,0 +1,28 @@
+<button class="btn-volver" (click)="irAHome()">Volver</button>
+
+<h2>Carrito de Compras</h2>
+<div *ngIf="mensajeCompra" class="mensaje-bienvenida">
+  {{ mensajeCompra }}
+</div>
+<div *ngIf="productos.length > 0; else noProductos">
+  <div *ngFor="let producto of productos">
+    <div class="producto">
+      <div class="info">
+        <h3>{{ producto.nombre }}</h3>
+        <p>Precio: {{ producto.precio }}</p>
+      </div>
+      <button (click)="eliminarProducto(producto)">Eliminar</button>
+    </div>
+  </div>
+
+  <div class="acciones">
+    <button class="btn-seguir-comprando" (click)="seguirComprando()">Seguir Comprando</button>
+    <button class="btn-vaciar-carrito" (click)="vaciarCarrito()">Vaciar Carrito</button>
+    <button class="btn-comprar" (click)="realizarPedido()">Comprar</button>
+
+  </div>
+</div>
+
+<ng-template #noProductos>
+  <p class="noproducts">No hay productos en el carrito.</p>
+</ng-template>

@@ -1,0 +1,50 @@
+<div role="contentinfo">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{ products?.[0]?.nombre }}</mat-card-title>
+      <mat-card-subtitle>Nuevo esta semana</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="/assets/img/camiseta.jpg">
+    <mat-card-actions>
+      <p>{{ products?.[0]?.precio }} $</p>
+      <button color="accent" mat-button (click)="comprarProducto(products[0])">Comprar</button>
+    </mat-card-actions>
+  </mat-card>
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{ products?.[1]?.nombre }}</mat-card-title>
+      <mat-card-subtitle>Nuevo esta semana</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="/assets/img/camiseta1.jpg">
+    <mat-card-actions>
+      <p>{{ products?.[1]?.precio }} $</p>
+      <button color="accent" mat-button (click)="comprarProducto(products[1])">Comprar</button>
+    </mat-card-actions>
+  </mat-card>
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{ products?.[2]?.nombre }}</mat-card-title>
+      <mat-card-subtitle>Nuevo esta semana</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="/assets/img/camiseta2.jpg">
+    <mat-card-actions>
+      <p>{{ products?.[2]?.precio }} $</p>
+      <button color="accent" mat-button (click)="comprarProducto(products[2])">Comprar</button>
+    </mat-card-actions>
+  </mat-card>
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{ products?.[3]?.nombre }}</mat-card-title>
+      <mat-card-subtitle>Nuevo esta semana</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="/assets/img/pexels-elena-rubtsova-14769473.jpg">
+    <mat-card-actions>
+      <p>{{ products?.[3]?.precio }} $</p>
+      <button color="accent" mat-button (click)="comprarProducto(products[3])">Comprar</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

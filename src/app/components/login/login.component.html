@@ -1,0 +1,89 @@
+<div class="home">
+  <button mat-fab color="accent" [routerLink]="['']">
+    <mat-icon>home</mat-icon>
+  </button>
+</div>
+
+
+<div role="contentinfo" >
+  <h1>Identifícate</h1>
+  <div class="back">
+    <button *ngIf="isLogin" mat-fab color="accent" (click)="isLogin=false" >
+      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+      </svg>
+    </button>
+
+    <div *ngIf="mensajeBienvenida" class="mensaje-bienvenida">
+      {{ mensajeBienvenida }}
+    </div>
+    <div *ngIf="mensajeCreado" class="mensaje-bienvenida">
+      {{ mensajeCreado }}
+    </div>
+    <button *ngIf="isNewUser" mat-fab color="accent" (click)="isNewUser=false" >
+      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+      </svg>
+    </button>
+  </div>
+
+<div role="button" *ngIf="!isNewUser && !isLogin">
+
+  <button (click)="isNewUser=!isNewUser" mat-raised-button color="accent">Nuevo Usuario</button>
+  <button (click)="isLogin=!isLogin" mat-raised-button color="accent">Iniciar sesión</button>
+
+
+</div>
+
+  <form  [formGroup]="newUser" *ngIf="isNewUser">
+  <div>
+    <label>
+      Nombre:
+    </label>
+    <input placeholder="Escriba su nombre"  id="name" type="text" formControlName="nombre">
+  </div>
+
+
+  <div>
+    <label>
+  Dirección:
+    </label>
+    <input placeholder="Escriba su dirección" id="dirección" type="text" formControlName="direccion">
+  </div>
+
+  <div>
+    <label>
+      Email:
+    </label>
+    <input placeholder="Escriba su email" id="email" type="email" formControlName="email">
+  </div>
+
+  <div>
+    <label>
+Contraseña:
+    </label>
+    <input placeholder="Escriba su contraseña" id="contraseña" type="password" formControlName="contraseña">
+  </div>
+
+  <button class="button" type="submit" (click)="create()">Enviar</button>
+</form>
+
+<form [formGroup]="login"  *ngIf="isLogin">
+  <div>
+    <label>
+      Nombre:
+    </label>
+    <input placeholder="Escriba su nombre" id="nombre" type="text" formControlName="nombre">
+  </div>
+
+  <div>
+    <label>
+      Contraseña:
+    </label>
+    <input placeholder="Escriba su contraseña" id="password" type="password" formControlName="contraseña">
+  </div>
+
+  <button class="button" type="submit" (click)="loginUser()"  >Enviar</button>
+
+</form>
+</div>

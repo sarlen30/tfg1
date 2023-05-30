@@ -1,0 +1,17 @@
+
+<div role="menu">
+<mat-chip-set aria-label="Fish selection">
+  <mat-chip (click)="dress1()" >Vestidos</mat-chip>
+  <mat-chip (click)="trousers1()" >Pantalones</mat-chip>
+  <mat-chip  (click)="tshirt1()" >Camisetas</mat-chip>
+  <mat-chip (click)="shoes1()">Zapatos</mat-chip>
+</mat-chip-set>
+</div>
+<app-dress *ngIf="dress"></app-dress>
+<app-trousers *ngIf="trousers"></app-trousers>
+<app-tshirt *ngIf="tshirt"></app-tshirt>
+<app-shoes *ngIf="shoes"></app-shoes>
+<div role="img" *ngIf="pic">
+  <img src="assets/img/dress-pink.jpg">
+
+</div>

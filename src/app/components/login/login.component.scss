@@ -1,0 +1,63 @@
+.home{
+  button{
+    margin-block-start:5rem;
+    margin-inline-start: 5rem;
+  }
+}
+
+div[role=contentinfo]{
+  display: flex;
+  flex-direction: column;
+  border:1px solid black;
+  margin: 4rem;
+  justify-content: center;
+  background-color:#fff3f4;
+
+  .back{
+    margin-inline: 4rem;
+  }
+
+  h1{
+    margin:2rem;
+    text-align: center;
+  }
+
+  div[role=button]{
+    display: flex;
+    justify-content: center;
+    margin:2rem;
+    button{
+      margin-block-end:3rem;
+      margin-inline: 3rem;
+      padding: 1rem;
+      margin-block-start: 1rem;
+    }
+
+}
+  form{
+    display: flex;
+    flex-direction: column;
+    div{
+      display: grid;
+padding: 1rem;
+      justify-content: center;
+      input{
+        width: 18rem;
+        align-self: center;
+      }
+    }
+
+    button{
+      background-color: pink;
+      margin: 2rem;
+      width: 18rem;
+      align-self: center;
+    }
+  }
+  .mensaje-bienvenida{
+    text-align: center;
+    font-family: cursive;
+    font-size: large;
+  }
+
+}
